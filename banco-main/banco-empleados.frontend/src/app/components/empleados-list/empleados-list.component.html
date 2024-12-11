@@ -1,0 +1,29 @@
+<div class="container">
+  <h3 class="center-align">Lista de Empleados</h3>
+  <div class="right-align">
+    <button class="btn green" (click)="navegarAlFormulario()">Agregar Empleado</button>
+  </div>
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Cargo</th>
+        <th>Sucursal</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empleado of empleados">
+        <td>{{ empleado.nombre }}</td>
+        <td>{{ empleado.apellido }}</td>
+        <td>{{ empleado.cargo }}</td>
+        <td>{{ empleado.sucursal }}</td>
+        <td>
+          <button class="btn-small orange" (click)="editarEmpleado(empleado)">Editar</button>
+          <button class="btn-small red" (click)="eliminarEmpleado(empleado._id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

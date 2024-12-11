@@ -1,0 +1,38 @@
+<div class="container">
+  <h3 class="center-align">Formulario de Empleados</h3>
+  <form (ngSubmit)="guardarEmpleado()">
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="nombre" type="text" [(ngModel)]="empleado.nombre" name="nombre" required />
+        <label for="nombre">Nombre</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="apellido" type="text" [(ngModel)]="empleado.apellido" name="apellido" required />
+        <label for="apellido">Apellido</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="identificacion" type="text" [(ngModel)]="empleado.identificacion" name="identificacion" required />
+        <label for="identificacion">Identificación</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="cargo" type="text" [(ngModel)]="empleado.cargo" name="cargo" required />
+        <label for="cargo">Cargo</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="salario" type="number" [(ngModel)]="empleado.salario" name="salario" required />
+        <label for="salario">Salario</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="sucursal" type="text" [(ngModel)]="empleado.sucursal" name="sucursal" required />
+        <label for="sucursal">Sucursal</label>
+      </div>
+    </div>
+    <button type="submit" class="btn">Guardar</button>
+  </form>
+  
+  
+</div>
